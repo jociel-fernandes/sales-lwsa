@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+LABEL maintainer="Jociel Fernandes <jociel@agencia3s.com.br>"
+LABEL version="lasted"
+
+WORKDIR /app
+
+RUN apk add --no-cache bash git python3 make g++ libc6-compat
+
+COPY .docker/conf.d/front-init.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+EXPOSE 5173
+
+ENTRYPOINT ["start.sh"]

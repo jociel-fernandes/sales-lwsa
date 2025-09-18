@@ -1,0 +1,20 @@
+{
+  "reset": {
+    "title": "Redefinir senha",
+    "token_label": "Token",
+    "email_label": "E-mail",
+    "new_password_label": "Nova senha",
+    "confirmation_label": "Confirmação",
+    "button_reset": "Redefinir senha",
+    "hint_allowed": ". A-Z a-z 0-9 # @ - _ *",
+    "rule_min_length": "Mínimo de {min} caracteres",
+    "rule_upper": "Ao menos uma letra maiúscula",
+    "rule_lower": "Ao menos uma letra minúscula",
+    "rule_digit_special": "Ao menos um dígito ou caractere especial",
+    "rule_allowed": "Apenas caracteres permitidos",
+    "error_fill_email": "Preencha o e-mail",
+    "error_password_rules": "A senha não satisfaz as regras de segurança",
+    "error_confirmation_mismatch": "A confirmação da senha não confere",
+    "success_reset": "Senha redefinida com sucesso. Você pode entrar agora."
+  }
+}

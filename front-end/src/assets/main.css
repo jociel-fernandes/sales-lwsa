@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0b66ff; /* DW blue */
+  --color-primary-600: #0b66ff;
+  --color-primary-700: #0957e6;
+}
+
+/* Custom app container */
+#app {
+  @apply max-w-6xl mx-auto p-8;
+}
+
+/* small form helpers */
+.auth-card {
+  @apply bg-white shadow-md rounded-lg p-6 max-w-md mx-auto;
+  transition: box-shadow 180ms cubic-bezier(.4,0,.2,1), transform 180ms cubic-bezier(.4,0,.2,1);
+}
+
+.auth-card:focus-within, .auth-card:hover {
+  box-shadow: 0 6px 18px rgba(14,30,80,0.12);
+  transform: translateY(-2px);
+}
+
+.auth-field label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.auth-field input {
+  @apply block w-full border border-gray-300 rounded-md p-2 mb-3;
+  transition: box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.auth-field input:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(11,102,255,0.12);
+  border-color: var(--color-primary-600);
+}
+
+/* micro animations */
+.motion-fade-up {
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 260ms cubic-bezier(.4,0,.2,1), opacity 260ms cubic-bezier(.4,0,.2,1);
+}
+.motion-fade-up.in { transform: translateY(0); opacity: 1 }
+
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.btn-primary:hover { background-color: var(--color-primary-700) }
+
+.text-error { @apply text-red-600 text-sm mt-2 }
+.text-success { @apply text-green-600 text-sm mt-2 }
+
