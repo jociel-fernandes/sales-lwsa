@@ -11,11 +11,12 @@
 
 ## no prompt na pasta raiz executar:
 
-#### mkdir ./.docker/volumes/mysql & docker-compose build --no-cache && docker-compose up
+mkdir ./.docker/volumes/mysql & docker compose up -d --build
+
 
 Aguardar o processamento, depende do PC e internet de 4 `a 15 min.
 
-Aacessar ambientes conforme host e porta que definiu no .env
+Acessar ambientes conforme host e porta que definiu no .env
 
 *** não me preocupei com muitos detalhes de front (rs)
 
@@ -26,11 +27,12 @@ Aacessar ambientes conforme host e porta que definiu no .env
 ** pode alterar no arquivo de seeder ./back-end/database/seeders/AdminUserSeeder.php
 
 
-Para testar envio dos relatorios diarios:
+### Para testar envio dos relatorios diarios:
 docker compose exec backend bash -lc "php artisan sales:send-daily-summaries"
 
-para executar os teste back-end
+### para executar os teste back-end: 
 docker compose exec backend bash -lc "php artisan test" 
 
-para executar os teste front-end
+### para executar os teste front-end:
+
 docker compose exec --user node app npm run test:unit --prefix /app
