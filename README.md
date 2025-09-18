@@ -11,7 +11,7 @@
 
 ## no prompt na pasta raiz executar:
 
-mkdir ./.docker/volumes/mysql & docker compose up -d --build
+mkdir ./.docker/volumes/mysql && docker compose up -d --build
 
 
 Aguardar o processamento, depende do PC e internet de 4 `a 15 min.
